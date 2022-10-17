@@ -183,7 +183,7 @@
   }
 
   #progress-text {
-    font-size: clamp(.7em, 1.4vw, .9em);
+    font-size: clamp(.8em, 1.4vw, .9em);
   }
 
   #progress-bar {
@@ -202,6 +202,7 @@
     border-radius: 15px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
+    transition: all 0.2s;
   }
 
   #question {
@@ -227,5 +228,3 @@
       margin: 20px 0;
     }
   }
-
-  
