@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>Quiz App</title>
+</head>
+<body>
+  <div class="info-container">
+    <header><h1>Headline Principal</h1></header>
+    <main>
+      <div class="texto">
+        <h2>Título do texto</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus ut lectus a convallis. 
+          Nam ornare posuere justo a interdum. Pellentesque molestie quis elit blandit faucibus.
+          <br>
+          Mauris nec neque at enim hendrerit varius vel sit amet arcu. Nullam placerat mauris non lacus rhoncus iaculis. 
+          Ut feugiat, sem et auctor sodales, lectus ex dictum nunc, vitae ultricies ligula eros vel mi.
+          <br>
+          Suspendisse nec arcu ex. Sed sed libero sapien. Nam finibus sapien eu lobortis viverra. 
+          Quisque ut commodo sapien.
+        </p>
+      </div>
+      <div class="img-container">
+        <img src="./img/quiz-image.jpg" alt="Imagem">
+      </div>
+    </main>
+  </div>
+  <div class="quiz-container">
+    <div id="question-container" class="hide">
+      <div id="progress-info">
+        <p id="progress-text"></p>
+        <div id="progress-bar">
+          <div id="progress-status"></div>
+        </div>
+      </div>
+      <div id="question">Pergunta</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Resposta 1</button>
+        <button class="btn">Resposta 2</button>
+        <button class="btn">Resposta 3</button>
+        <button class="btn">Resposta 4</button>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="quiz-info">
+        <h2>Faça o Quiz</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus ut lectus a convallis</p>
+      </div>
+      <button id="start-btn" class="start-btn btn">Começar</button>
+      <button id="next-btn" class="next-btn btn hide">Proxima</button>
+      <button id="results-btn" class="results-btn btn hide">Resultados</button>
+    </div>
+  </div>
+</body>
+</html>
