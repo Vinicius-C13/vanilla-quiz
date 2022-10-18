@@ -10,10 +10,13 @@
 </head>
 <body>
   <div class="info-container">
+    <!--headline principal-->
     <header><h1>Headline Principal</h1></header>
     <main>
       <div class="texto">
+        <!--titulo do texto principal-->
         <h2>Título do texto</h2>
+        <!--corpo do texto-->
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus ut lectus a convallis. 
           Nam ornare posuere justo a interdum. Pellentesque molestie quis elit blandit faucibus.
@@ -26,10 +29,12 @@
         </p>
       </div>
       <div class="img-container">
+        <!--Imagem-->
         <img src="./img/quiz-image.jpg" alt="Imagem">
       </div>
     </main>
   </div>
+  <!--quiz-->
   <div class="quiz-container">
     <div id="question-container" class="hide">
       <div id="progress-info">
@@ -38,7 +43,9 @@
           <div id="progress-status"></div>
         </div>
       </div>
+      <!--pergunta *alterar perguntas pelo doc script.js*-->
       <div id="question">Pergunta</div>
+      <!--opções de resposta *alterar respostas pelo doc script.js*-->
       <div id="answer-buttons" class="btn-grid">
         <button class="btn">Resposta 1</button>
         <button class="btn">Resposta 2</button>
@@ -48,14 +55,16 @@
     </div>
     <div class="controls">
       <div class="quiz-info">
+        <!--titulo do quiz-->
         <h2>Faça o Quiz</h2>
+        <!--Texto do quiz-->
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus ut lectus a convallis</p>
       </div>
+      <!--botão do quiz-->
       <button id="start-btn" class="start-btn btn">Começar</button>
       <button id="next-btn" class="next-btn btn hide">Proxima</button>
       <button id="results-btn" class="results-btn btn hide">Resultados</button>
     </div>
-    <div id="scrolled"></div>
   </div>
 </body>
 </html>

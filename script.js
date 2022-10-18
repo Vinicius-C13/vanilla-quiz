@@ -25,7 +25,7 @@ function startGame() {
 }
 
 function setNextQuestion() {
-  if(currentQuestionIndex < 4) {
+  if(currentQuestionIndex < questions.length) {
     resetState()
     showQuestion(sortedQuestions[currentQuestionIndex]);
     barProgression(currentQuestionIndex);
@@ -36,7 +36,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  progressText.innerText = question.text;
+  progressText.innerText = question.status;
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
     const button = document.createElement('button')
@@ -76,15 +76,15 @@ function showResults() {
       '<h2>Seus Resultados</h2>\
        <p>Clique no botão para fazer alguma ação:</p>\
        <br>\
-       <button class=btn>Botão</button>'
+       <a href="https://www.google.com/"><button class="btn final-btn">Botão</button></a>'
     scrollBottom();
 }
 
 function barProgression(question) {
-  let progress = (question + 1)*(100/4);
+  let progress = (question + 1)*(100/questions.length);
   progressStatus.style.width = progress + '%';
 
-  if(question + 1 == 4) {
+  if(question + 1 == questions.length) {
     progressStatus.style.borderRadius = '15px'; 
   }
 }
@@ -93,10 +93,17 @@ function scrollBottom() {
   window.scrollTo(0, document.body.scrollHeight);
 }
 
+//Perguntas e respostas
+
+/*Aqui estão as perguntas e as respostas. 
+Para alterar a pergunta, altere o texto que está entre aspas logo após question:
+Para alterar as respostas, altere o texto que está entre aspas após text:
+*/
+
 const questions = [
   {
     question: 'Pergunta 1',
-    text: 'Questão 1 de 4',
+    status: 'Questão 1 de 4',
     answers: [
       { text: 'Resposta 1'},
       { text: 'Resposta 2'}
@@ -104,7 +111,7 @@ const questions = [
   },
   {
     question: 'Pergunta 2',
-    text: 'Questão 2 de 4',
+    status: 'Questão 2 de 4',
     answers: [
       { text: 'Resposta 1'},
       { text: 'Resposta 2'}
@@ -112,7 +119,7 @@ const questions = [
   },
   {
     question: 'Pergunta 3',
-    text: 'Questão 3 de 4',
+    status: 'Questão 3 de 4',
     answers: [
       { text: 'Resposta 1'},
       { text: 'Resposta 2'}
@@ -120,7 +127,7 @@ const questions = [
   },
   {
     question: 'Pergunta 4',
-    text: 'Questão 4 de 4',
+    status: 'Questão 4 de 4',
     answers: [
       { text: 'Resposta 1'},
       { text: 'Resposta 2'}
